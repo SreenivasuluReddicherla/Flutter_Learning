@@ -1,0 +1,43 @@
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "Login Your account",
+              style: GoogleFonts.getFont(
+                'Lato',
+                color: Color(0xFF0d120E),
+                fontWeight: FontWeight.bold,
+                letterSpacing: 0.2,
+                fontSize: 23,
+              ),
+            ),
+            Text(
+              "To explore the world exclusively",
+              style: GoogleFonts.getFont(
+                'Lato',
+                color: Color.fromARGB(255, 78, 0, 0),
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            Image.asset(
+              'assets/images/Illustration.png',
+              width: 200,
+              height: 200,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
