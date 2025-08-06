@@ -54,7 +54,7 @@ class LoginScreen extends StatelessWidget {
                   fillColor: Colors.white,
                   filled: true,
                   border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(9),
+                    borderRadius: BorderRadius.circular(20),
                   ),
                   focusedBorder: InputBorder.none,
                   enabledBorder: InputBorder.none,
@@ -65,11 +65,11 @@ class LoginScreen extends StatelessWidget {
                     letterSpacing: 0.1,
                   ),
                   prefixIcon: Padding(
-                    padding: const EdgeInsets.all(10.0),
+                    padding: const EdgeInsets.all(5.0),
                     child: Image.asset(
                       'assets/icons/email.png',
-                      width: 20,
-                      height: 20,
+                      width: 15,
+                      height: 15,
                     ),
                   ),
                 ),
@@ -91,7 +91,7 @@ class LoginScreen extends StatelessWidget {
                   fillColor: Colors.white,
                   filled: true,
                   border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(9),
+                    borderRadius: BorderRadius.circular(20),
                   ),
                   focusedBorder: InputBorder.none,
                   enabledBorder: InputBorder.none,
@@ -102,14 +102,39 @@ class LoginScreen extends StatelessWidget {
                     letterSpacing: 0.1,
                   ),
                   prefixIcon: Padding(
-                    padding: const EdgeInsets.all(10.0),
+                    padding: const EdgeInsets.all(5.0),
                     child: Image.asset(
                       'assets/icons/password.png',
-                      width: 20,
-                      height: 20,
+                      width: 15,
+                      height: 15,
                     ),
                   ),
                   suffixIcon: Icon(Icons.visibility),
+                ),
+              ),
+              SizedBox(height: 40),
+              Container(
+                width: 200,
+                height: 50,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30),
+                  gradient: LinearGradient(
+                    colors: [
+                      Color(0xFF102DE1),
+                      Color.fromARGB(228, 0, 15, 110),
+                    ],
+                  ),
+                ),
+                child: Center(
+                  child: Text(
+                    'Sign in',
+                    style: GoogleFonts.getFont(
+                      'Lato',
+                      fontSize: 18,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ),
               ),
             ],
