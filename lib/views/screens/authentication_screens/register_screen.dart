@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:myapp/views/screens/authentication_screens/register_screen.dart';
+import 'package:myapp/views/screens/authentication_screens/login_screen.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class RegisterScreen extends StatelessWidget {
+  const RegisterScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class LoginScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                "Login Your account",
+                "Create Your account",
                 style: GoogleFonts.getFont(
                   'Lato',
                   color: Color(0xFF0d120E),
@@ -79,6 +79,43 @@ class LoginScreen extends StatelessWidget {
               Align(
                 alignment: Alignment.topLeft,
                 child: Text(
+                  'Full Name',
+                  style: GoogleFonts.getFont(
+                    'Nunito Sans',
+                    fontWeight: FontWeight.w500,
+                    letterSpacing: 0.2,
+                  ),
+                ),
+              ),
+              TextFormField(
+                decoration: InputDecoration(
+                  fillColor: Colors.white,
+                  filled: true,
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  focusedBorder: InputBorder.none,
+                  enabledBorder: InputBorder.none,
+                  labelText: "enter your full name",
+                  labelStyle: GoogleFonts.getFont(
+                    "Nunito Sans",
+                    fontSize: 14,
+                    letterSpacing: 0.1,
+                  ),
+                  prefixIcon: Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: Image.asset(
+                      'assets/icons/user.jpeg',
+                      width: 15,
+                      height: 15,
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(height: 20),
+              Align(
+                alignment: Alignment.topLeft,
+                child: Text(
                   'Password',
                   style: GoogleFonts.getFont(
                     'Nunito Sans',
@@ -128,7 +165,7 @@ class LoginScreen extends StatelessWidget {
                 ),
                 child: Center(
                   child: Text(
-                    'Sign In',
+                    'Sign Up',
                     style: GoogleFonts.getFont(
                       'Lato',
                       fontSize: 18,
@@ -143,7 +180,7 @@ class LoginScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "Need an account ? ",
+                    "Already have an account ? ",
                     style: GoogleFonts.roboto(
                       fontWeight: FontWeight.w500,
                       letterSpacing: 1,
@@ -155,13 +192,13 @@ class LoginScreen extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                           builder: (context) {
-                            return RegisterScreen();
+                            return LoginScreen();
                           },
                         ),
                       );
                     },
                     child: Text(
-                      "Sign Up",
+                      "Sign In",
                       style: GoogleFonts.roboto(
                         fontWeight: FontWeight.bold,
                         color: Color(0xFF102DE1),
